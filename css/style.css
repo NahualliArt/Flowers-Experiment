@@ -1,0 +1,46 @@
+body{
+  background-color: whitesmoke;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.back-color{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0f0f0f;
+    margin-left: 20px; margin-right: 20px;
+    margin-top: 20%;
+}
+
+.espacio-vacio{
+  margin: 5%;
+}
+
+.bloque1{
+  background-color: #798484;
+}
+
+h1{
+  font-size: 90px;
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 20px;
+  text-shadow: 5px 5px 9px #272929;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.prueba{
+  z-index: 1;
+  margin-top: 35%;
+  margin-bottom: 0%;
+  margin-left: 0;
+  margin-right: -100%;
+  /*margin: -100% 35% 0 0;*/
+  width: 100%;
+  height: auto;
+}
+
+p{
+  z-index: 2;
+}
+
