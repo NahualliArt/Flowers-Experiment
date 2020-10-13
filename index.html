@@ -42,29 +42,29 @@
 
     <!--HERO HOME-->
     <div class="inicio">
-        <div class="container">
-            <div class="row my-5">
-            <div class="inicioText col-md-4 col-lg-4 content order-1">
-                <h1>LOREM IPSUM</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam similique, 
+        <div class="container mr-n3">
+            <div class="row mt-5">
+                <div class="inicioText col-md-4 col-lg-4 content order-1">
+                    <h1>LOREM IPSUM</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam similique, 
                     saepe obcaecati voluptas unde corporis perspiciatis quos. Qui inventore officia reprehenderit 
                     debitis maiores placeat tenetur recusandae, voluptas cupiditate consectetur itaque!
-                </p>
-                <div class="row py-2">
-                    <div class="d-flex justify-content-between socials"> 
+                    </p>
+                    <div class="row py-2">
+                        <div class="d-flex justify-content-between socials"> 
                             <li>FB</li>
                             <li>IN</li>
                             <li>WP</li>                    
+                        </div>
                     </div>
-                </div>        
-            </div>
-            <div class="col-md-8 col-lg-8 order-2 imagen-inicio">
-                <div class="img-inicio">
-                    <img src="../new_design/pexels-axel-vandenhirtz-929280.jpg" class="img-fluid shadow">
+                </div>
+                <div class="col-md-8 col-lg-8 order-2 imagen-inicio">
+                    <div class="img-inicio">
+                        <img src="https://media.giphy.com/media/lnmR8HiZcsHYXi23Jj/giphy.gif" class="img-fluid shadow">
+                    </div>
                 </div>
             </div>
-        </div>
-        <h1 class="title">Sigue bajando para ver la mágia</h1>
+        <!--<h4 class="title">Sigue bajando para ver la mágia</h4>-->
         </div>
         
     </div>
@@ -86,9 +86,10 @@
                     <!--IMAGEN 3D-->
                     <div class="container d-flex imagenEfecto">
                         <div class="box">
-                            <h2 class="name">Eos nam accusamus</h2>
+                            <a href="#" class="btn-contact shadow">Contáctanos</a>
+                            <img src="phone.png" class="imgEfecto img-fluid" style="width: 50%;">
                             <div class="circle"></div>
-                            <img src="phone.png" class="imgEfecto img-fluid">
+                            <h2 class="name">Eos nam accusamus</h2>
                         </div>
                     </div>
                 </div>
@@ -112,5 +113,16 @@
         var value = window.scrollY;
         section.style.clipPath = "circle("+ value+"px at center)"
     })
+</script>
+<!--3D EFFECT-->
+<script src="vanilla-tilt.min.js"></script>
+<script>
+    VanillaTilt.init(document.querySelector(".box"), {
+		max: 25,
+		speed: 400
+	});
+	
+	//It also supports NodeList
+	VanillaTilt.init(document.querySelectorAll(".your-element"));
 </script>
 </html>

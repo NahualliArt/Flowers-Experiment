@@ -1,6 +1,6 @@
 html, body{
   margin:0; padding: 0;
-  background-color: whitesmoke;
+  background-color: #0f0f0f;
   font-family: 'Noto Sans JP', sans-serif;
   box-sizing: border-box;
   color: #eee;
@@ -12,12 +12,12 @@ h1{
 
 .inicio{
   position: fixed;
-  top: 0px; left: 0;
+  top: 50px; left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #0f0f0f;
+  background: url(../back.jpg);
   background-attachment: fixed;
-  z-index: -1;
+  z-index: -100;
 }
 
 .title{
@@ -36,7 +36,12 @@ h1{
 }
 
 .imagen-inicio{
-  background-color: #0f0f0f;
+  height: auto;
+  background: url(https://media.giphy.com/media/lnmR8HiZcsHYXi23Jj/giphy.gif);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 section{
@@ -52,6 +57,7 @@ section{
 
 .about{
   background-color: #0f0f0f;
+  z-index: 20;
 }
 
 .cont1{
@@ -76,7 +82,8 @@ section{
 
 .imagenEfecto .box{
   position: relative;
-  width: 300px;
+  top: 0; left: 0;
+  width: 800px;
   height: 400px;
   margin: 40px;
   background-color: #232323;
@@ -103,11 +110,80 @@ section{
   color: #eee;
   opacity: 0;
   font-style: italic;
+  transition: 0.5s;
 }
 
 .imagenEfecto .box:hover::before,
 .imagenEfecto .box::after{
   opacity: 0.04;
+}
+
+.container .box .name{
+  position: absolute;
+  top: 0; left: 0;
+  text-align: center;
+  color: #eee;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,75px);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 20;
+
+}
+
+.container .box:hover .name{
+  top: 40px;
+  opacity: 1;
+
+}
+
+.container .box .btn-contact{
+  position: absolute;
+  bottom: 0; left: 50px;
+  transform-style: preserve-3d;
+  transform: translate(-50%, 0, 75px);
+  color: #eee;
+  background: #232323;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 20;
+  text-align: center;
+
+}
+
+.container .box:hover .btn-contact{
+  bottom: 40px;
+  opacity: 1;
+}
+
+.container .box .circle{
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #eee;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px);
+  z-index: 10;
+  opacity: 1;
+}
+
+.container .box .imgEfecto{
+  position: absolute;
+  top: 50%; left: 50%;
+  max-width: 300px;
+  transition: 0.5s;
+  z-index: 21;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
+
 }
 
 
