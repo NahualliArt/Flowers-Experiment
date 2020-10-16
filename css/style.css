@@ -44,6 +44,11 @@ h1{
   background-size: cover;
 }
 
+.img-inicio img{
+  position: relative;
+  opacity: 1;
+}
+
 section{
   position: relative;
   /*margin-top para que comience al final de la seccion anterior*/
@@ -66,7 +71,13 @@ section{
   height: 100vh;
   background-color: #0f0f0f;
   padding: 100px;
-  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  /**/
+}
+
+.cont1 .texto--about{
+  margin-top: 10%;
 }
 
 .container h2{
@@ -95,7 +106,7 @@ section{
   content: 'ORDEN';
   position: absolute;
   top: 20px; left: 20px;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: bolder;
   color: #eee;
   opacity: 0;
@@ -105,7 +116,7 @@ section{
   content: 'MEJOR';
   position: absolute;
   bottom: 20px; right: 20px;
-  font-size: 70px;
+  font-size: 80px;
   font-weight: bolder;
   color: #eee;
   opacity: 0;
@@ -150,27 +161,14 @@ section{
   text-decoration: none;
   transition: 0.5s;
   opacity: 0;
-  z-index: 20;
+  z-index: 200;
   text-align: center;
 
 }
 
 .container .box:hover .btn-contact{
+  background: #91dfcf;
   bottom: 40px;
-  opacity: 1;
-}
-
-.container .box .circle{
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  transition: 0.5s;
-  background: #eee;
-  transform-style: preserve-3d;
-  transform: translate3d(-50%, -50%, 50px);
-  z-index: 10;
   opacity: 1;
 }
 
@@ -183,7 +181,6 @@ section{
   transition: 0.5s;
   transform-style: preserve-3d;
   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
-
 }
 
 
