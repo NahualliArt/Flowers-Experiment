@@ -146,7 +146,6 @@ section{
 .container .box:hover .name{
   top: 40px;
   opacity: 1;
-
 }
 
 .container .box .btn-contact{
@@ -172,12 +171,26 @@ section{
   opacity: 1;
 }
 
+/*.container .box .circle{
+  position: relative;
+  top: 50%; left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #eee;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px);
+  z-index: -10;
+  opacity: 1;
+}*/
+
 .container .box .imgEfecto{
   position: absolute;
   top: 50%; left: 50%;
   max-width: 300px;
   transition: 0.5s;
-  z-index: 21;
+  z-index: 150;
   transition: 0.5s;
   transform-style: preserve-3d;
   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
