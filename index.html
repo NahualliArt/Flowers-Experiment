@@ -7,15 +7,12 @@
     <link rel="icon" 
       type="image/png" 
       href="img/favicon.png">
+
     <!--DESCRIPCION PARA GOOGLE-->
-    <meta content="" name="keywords">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Design Project">
     <meta name="author" content="Abigail P. NahualliArt">
-
-    <!-- Favicons -->
-    <link href="" rel="icon">
 
     <!--FONT
         noto sans y fjalla fonts-->
@@ -37,20 +34,27 @@
     
 </head>
 <body>
-    <header>
-    <!-- Top menu -->
     
-    </header>
-
+    <!-- Top menu -->
+    <div class="header">
+        <ul class="mx-auto shadow">
+            <a href="#home"><li>Home</li></a>
+            <a href="#logo"><li>Logo Show</li></a>
+            <a href="#3d"><li>3D Effect on Hover</li></a>
+            <a href="#hover"><li>Show on Hover Image</li></a>
+        </ul>
+    </div>
+    
     <!--HERO HOME-->
-    <div class="inicio">
+    <div class="inicio" id="home">
         <div class="container mr-n3">
             <div class="row mt-5">
                 <div class="inicioText col-md-4 col-lg-4 content order-1">
-                    <h1>LOREM IPSUM</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam similique, 
-                    saepe obcaecati voluptas unde corporis perspiciatis quos. Qui inventore officia reprehenderit 
-                    debitis maiores placeat tenetur recusandae, voluptas cupiditate consectetur itaque!
+                    <h1>Language of flowers</h1>
+                    <p>In Hindu mythology, flowers have a significant status. Vishnu, one of the three major gods in the Hindu system, 
+                        is often depicted standing straight on a lotus flower. Apart from the association with Vishnu, the Hindu tradition 
+                        also considers the lotus to have spiritual significance.
+                         For example, it figures in the Hindu stories of creation.
                     </p>
                     <div class="row py-2">
                         <div class="d-flex justify-content-between socials"> 
@@ -73,26 +77,28 @@
     </div>
 
     <!--LOGO EFFECT-->
-    <section></section>
+    <section id="logo"></section>
 
-    <!--ABOUT-->
-    <div class="about">
+    <!-- 3D EFFECT -->
+    <div class="about" id="3d">
         <div class="container cont1">
             <div class="row">
-                <div class="texto--about col-md-6 col-lg-6 col-sm-12">
-                    <h2>HELLO WORLD</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, 
-                        repudiandae eos odit ipsa asperiores ratione dolor at adipisci consequatur 
-                        optio culpa laboriosam sapiente sit a rerum officiis vitae temporibus deserunt.</p>
+                <div class="texto--about col-md-6 col-lg-6 col-sm-12 p-5">
+                    <h2>Do you like Flowers?</h2>
+                    <p>Because of their varied and colorful appearance, flowers have long been a 
+                        favorite subject of visual artists as well. 
+                        Some of the most celebrated paintings from well-known painters are of flowers, 
+                        such as Van Gogh's sunflowers series or Monet's water 
+                        lilies. Flowers are also dried, freeze dried and pressed in order to create permanent, 
+                        three-dimensional pieces of flower art. </p>
                 </div>
                 <div class="col-md-6 col-lg-6 col-sm-12">
                     <!--IMAGEN 3D-->
                     <div class="container d-flex imagenEfecto">
                         <div class="box">
-                            <a href="#" class="btn-contact shadow">Contáctanos</a>
-                            <img src="phone.png" class="imgEfecto img-fluid" style="width: 50%;">
-                            <div class="circle"></div>
-                            <h2 class="name">Eos nam accusamus</h2>
+                            <a href="https://dribbble.com/nahualliArt" class="btn-contact shadow">Know Me</a>
+                            <img src="https://media.giphy.com/media/l0HlJP9hs5KEGm3RK/giphy.gif" class="imgEfecto img-fluid" style="width: 50%;">
+                            <h2 class="name">Floriography</h2>
                         </div>
                     </div>
                 </div>
@@ -100,12 +106,12 @@
         </div>
     </div>   
     
-    <!--  EXAMPLE 2 -->
-    <div class="container-fluid imgRight">
+    <!-- HOVER TEXT -->
+    <div class="container-fluid imgRight" id="hover">
         <div class="row no-gutter">
             <!-- imagen full size left size backgorund-image-->
             <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image imagenDer">
-                <img src="https://media.giphy.com/media/hUL9icm7onm6vbnjC2/giphy.gif">
+                <img src="https://media.giphy.com/media/XtJVOMj541OVi/giphy.gif">
             </div>
             <!-- content text left size -->
             <div class="col-md-8 col-lg-6">
@@ -115,12 +121,16 @@
                         <div class="row">
                             <!-- titulo y texto -->
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="contDer-titulo mb-4">LOREM IMPSUN</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore dolorum eum quibusdam tenetur accusamus 
-                                    quo at numquam nemo facere, reiciendis debitis esse aperiam illo eaque incidunt assumenda iste, 
-                                    necessitatibus repellat.</p>
+                                <h3 class="contDer-titulo mb-4">Flower-giving</h3>
+                                <p>The tradition of flower-giving exists in many forms. It is an important part of Russian culture and folklore. 
+                                    It is common for students to give flowers to their teachers. To give yellow flowers in a 
+                                    romantic relationship means break-up in Russia. 
+                                    Nowadays, flowers are often given away in the form of a flower bouquet.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="find-me" data-hover="Hover the image!" data-active="Active">
+                        <span>Hover here!</span>
                     </div>
                 </div>
             </div>
@@ -149,12 +159,11 @@
 <!--3D EFFECT-->
 <script src="vanilla-tilt.min.js"></script>
 <script>
+
     VanillaTilt.init(document.querySelector(".box"), {
 		max: 25,
 		speed: 400
 	});
 	
-	//It also supports NodeList
-	VanillaTilt.init(document.querySelectorAll(".your-element"));
 </script>
 </html>

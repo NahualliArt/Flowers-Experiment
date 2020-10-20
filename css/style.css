@@ -20,6 +20,31 @@ a:hover{
   text-decoration: line-through;
 }
 
+/*HEADER*/
+
+.header{
+  width: 100%;
+  height: 50px;
+  top: 2%;
+  position: fixed;
+  z-index: 900;
+  text-align: center;
+  background: #161515;
+  padding-top: 12px;
+}
+
+.header ul{
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header li{
+  display: inline;
+  margin: 2%;
+}
+
 
 /* INICIO -- PRIMER BLOQUE */
 
@@ -77,8 +102,11 @@ section{
   clip-path: circle(0px at center);
 }
 
+
+/*EFECTO 3D EN IMAGEN Y TEXTO*/
+
 .about{
-  background-color: #0f0f0f;
+  background: url(../img/back.jpg);
   z-index: 20;
 }
 
@@ -86,20 +114,29 @@ section{
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #0f0f0f;
   padding: 100px;
   align-items: center;
   justify-content: center;
-  /**/
 }
 
 .cont1 .texto--about{
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
-.container h2{
-  font-size: 40px;
+.cont1 h2{
+  font-size: 50px;
+  margin-bottom: 30px;
+  font-family: 'Fjalla One', sans-serif;
 }
+
+.cont1 p {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: justify;
+  text-justify: initial;
+}
+
+/** INICIA EL EFECTO 3D **/
 
 .imagenEfecto{
   justify-content: center;
@@ -114,26 +151,26 @@ section{
   width: 800px;
   height: 400px;
   margin: 40px;
-  background-color: #232323;
+  background-color: #161515;
   border-radius: 20px;
   transform-style: preserve-3d;
 }
 
 .imagenEfecto .box::before{
-  content: 'ORDEN';
+  content: 'FLOWER';
   position: absolute;
   top: 20px; left: 20px;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bolder;
   color: #eee;
   opacity: 0;
 }
 
 .imagenEfecto .box::after{
-  content: 'MEJOR';
+  content: 'FLEURS';
   position: absolute;
   bottom: 20px; right: 20px;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bolder;
   color: #eee;
   opacity: 0;
@@ -142,9 +179,10 @@ section{
 }
 
 .imagenEfecto .box:hover::before,
-.imagenEfecto .box::after{
+.imagenEfecto .box:hover::after{
   opacity: 0.04;
 }
+
 
 .container .box .name{
   position: absolute;
@@ -167,7 +205,7 @@ section{
 
 .container .box .btn-contact{
   position: absolute;
-  bottom: 0; left: 50px;
+  bottom: 40px; left: 50px;
   transform-style: preserve-3d;
   transform: translate(-50%, 0, 75px);
   color: #eee;
@@ -176,7 +214,7 @@ section{
   border-radius: 30px;
   text-decoration: none;
   transition: 0.5s;
-  opacity: 0;
+  opacity: 1;
   z-index: 200;
   text-align: center;
 
@@ -184,25 +222,10 @@ section{
 
 .container .box:hover .btn-contact{
   background: #91dfcf;
-  bottom: 40px;
+  color: #0f0f0f;
+  bottom: 40px; left: 100px;
   opacity: 1;
 }
-
-/* Circulo blanco, no sirve Z-Index, no se pone debajo de nada.
-
-.container .box .circle{
-  position: relative;
-  top: 50%; left: 50%;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  transition: 0.5s;
-  background: #eee;
-  transform-style: preserve-3d;
-  transform: translate3d(-50%, -50%, 50px);
-  z-index: -10;
-  opacity: 1;
-}*/
 
 .container .box .imgEfecto{
   position: absolute;
@@ -215,12 +238,15 @@ section{
   transform: translate3d(-50%, -50%, 0px) rotate(-15deg);
 }
 
+
+
+/** IMAGEN FULL HEIGHT RIGHT SIZE **/
 .imgRight{
   --input-padding-x: 1.5rem;
   --input-padding-y: 0.75rem;
   width: 100%;
   height: 100vh;
-  background: url(../back.jpg);
+  background: #161515;
 }
 
 .contDer,
@@ -230,11 +256,18 @@ section{
 
 .imagenDer img{
   position: absolute;
-  top: 50px; right: 20px;
+  top: 15%; right: 0px;
+  opacity: 0;
+  transition: transform 1s;
+}
+
+.imagenDer img:hover{
+  opacity: 1;
+  transform: translate(80px, 20px);
 }
 
 .bg-image {
-  background-image: url('https://images.unsplash.com/photo-1585511582331-14e7c5f89735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');
+  background-image: url('../img/logo_back.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -247,6 +280,88 @@ section{
   font-weight: 300;
   font-family: 'Fjalla One', sans-serif;
   font-size: larger;
+}
+
+.find-me{
+  position: absolute;
+  bottom: 12%;
+}
+
+/*HOVER EFFECT*/
+
+.find-me span{
+  -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    -o-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.find-me::before, .find-me::after{
+  content: "";
+  opacity: 0;
+    -webkit-transition: .4s,opacity .6s;
+    -moz-transition: .4s,opacity .6s;
+    -o-transition: .4s,opacity .6s;
+    transition: .4s,opacity .6s;
+}
+
+.find-me::before{
+  content: attr(data-hover);
+  -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+}
+
+.find-me::after{
+  content: attr(data-active);
+  -webkit-transform: translate(150%,0);
+    -moz-transform: translate(150%,0);
+    -ms-transform: translate(150%,0);
+    -o-transform: translate(150%,0);
+    transform: translate(150%,0);
+}
+
+.find-me:hover span,
+.find-me:active span{
+  opacity: 0;
+  -webkit-transform: scale(0.3);
+    -moz-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    -o-transform: scale(0.3);
+    transform: scale(0.3);
+}
+
+.find-me:hover::before,
+.find-me:active::after{
+  opacity: 1;
+  -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition-delay: .4s;
+    -moz-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+
+.find-me:active::before{
+  -webkit-transform: translate(-150%,0);
+    -moz-transform: translate(-150%,0);
+    -ms-transform: translate(-150%,0);
+    -o-transform: translate(-150%,0);
+    transform: translate(-150%,0);
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+    opacity: 0;
 }
 
 
